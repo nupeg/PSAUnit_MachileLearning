@@ -1,0 +1,25 @@
+{
+    "os": "Windows-10-10.0.19043-SP0",
+    "python": "3.8.13",
+    "heartbeatAt": "2022-05-20T16:22:23.915760",
+    "startedAt": "2022-05-20T16:22:21.303070",
+    "docker": null,
+    "cpu_count": 4,
+    "cuda": null,
+    "args": [
+        "source.api.main:app",
+        "--reload"
+    ],
+    "state": "running",
+    "program": "C:\\Users\\LABSIMULACAO\\anaconda3\\envs\\PSAUnit_ML2\\Scripts\\uvicorn-script.py",
+    "codePath": "..\\..\\..\\..\\anaconda3\\envs\\PSAUnit_ML2\\Scripts\\uvicorn-script.py",
+    "git": {
+        "remote": "https://github.com/nupeg/PSAUnit_MachileLearning",
+        "commit": "ab0715c4a235fbfe73cc63b71d99010847db7d92"
+    },
+    "email": "labsimulacao.nupeg@gmail.com",
+    "root": "C:/Users/LABSIMULACAO/Meu Drive/ML_Project1-N2_sep/Work_in_progress/PSAUnit_ML2",
+    "host": "LABSIMULACAOMARIO",
+    "username": "LABSIMULACAO",
+    "executable": "C:\\Users\\LABSIMULACAO\\anaconda3\\envs\\PSAUnit_ML2\\python.exe"
+}
