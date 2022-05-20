@@ -92,4 +92,4 @@ async def get_inference(conditions: Conditions):
     predict = pipe.predict(df)
     #print(f"N2 mole fraction in the purified stream: {predict[0]}")
     
-    return predict[0]
+    return "Deu certo" if predict[0]<1  else "Deu erro"
