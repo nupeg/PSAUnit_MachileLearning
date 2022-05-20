@@ -1,0 +1,25 @@
+{
+    "os": "Windows-10-10.0.19043-SP0",
+    "python": "3.8.13",
+    "heartbeatAt": "2022-05-19T21:28:06.502868",
+    "startedAt": "2022-05-19T21:28:03.710446",
+    "docker": null,
+    "cpu_count": 4,
+    "cuda": null,
+    "args": [
+        "source.api.main:app",
+        "--reload"
+    ],
+    "state": "running",
+    "program": "C:\\Users\\LABSIMULACAO\\anaconda3\\envs\\PSA_Unit_MachineLearning\\Scripts\\uvicorn-script.py",
+    "codePath": "..\\..\\..\\..\\anaconda3\\envs\\PSA_Unit_MachineLearning\\Scripts\\uvicorn-script.py",
+    "git": {
+        "remote": "https://github.com/ivanovitchm/colab2mlops.git",
+        "commit": "5902ac60c284b7289775f68c6551c7819a4f9ecf"
+    },
+    "email": "labsimulacao.nupeg@gmail.com",
+    "root": "C:/Users/LABSIMULACAO/Meu Drive/ML_Project1-N2_sep/Work_in_progress/PSA_Unit_MachineLearning",
+    "host": "LABSIMULACAOMARIO",
+    "username": "LABSIMULACAO",
+    "executable": "C:\\Users\\LABSIMULACAO\\anaconda3\\envs\\PSA_Unit_MachineLearning\\python.exe"
+}
