@@ -30,18 +30,19 @@ response = requests.post(f"{url}/predict",
                          json=conditions)
 
 print(f"Request: {url}/predict")
-print(f"Conditions: \n Adsorp_pres: {conditions['Adsorp_pres']}\n"\
-      f"Conditions: \n CoCur_BlowPres: {conditions['CoCur_BlowPres']}\n"\
-      f"Conditions: \n CountCur_pres: {conditions['CountCur_pres']}\n"\
-      f"Conditions: \n Adsorp_time: {conditions['Adsorp_time']}\n"\
-      f"Conditions: \n CoCur_desorp_time: {conditions['CoCur_desorp_time']}\n"\
-      f"Conditions: \n CountCur_desorp_time: {conditions['CountCur_desorp_time']}\n"\
-      f"Conditions: \n Compres_time: {conditions['Compres_time']}\n"\
-      f"Conditions: \n Vol_flow: {conditions['Vol_flow']}\n"\
-      f"Conditions: \n Temp: {conditions['Temp']}\n"\
-      f"Conditions: \n Col_length: {conditions['Col_length']}\n"\
-      f"Conditions: \n Col_diam: {conditions['Col_diam']}\n"\
-      f"Conditions: \n Temp: {conditions['Temp']}\n"\
+print("-- CONDITIONS -- \n"\
+      f"Adsorp_pres: {conditions['Adsorp_pres']}\n"\
+      f"CoCur_BlowPres: {conditions['CoCur_BlowPres']}\n"\
+      f"CountCur_pres: {conditions['CountCur_pres']}\n"\
+      f"Adsorp_time: {conditions['Adsorp_time']}\n"\
+      f"CoCur_desorp_time: {conditions['CoCur_desorp_time']}\n"\
+      f"CountCur_desorp_time: {conditions['CountCur_desorp_time']}\n"\
+      f"Compres_time: {conditions['Compres_time']}\n"\
+      f"Vol_flow: {conditions['Vol_flow']}\n"\
+      f"Temp: {conditions['Temp']}\n"\
+      f"Col_length: {conditions['Col_length']}\n"\
+      f"Col_diam: {conditions['Col_diam']}\n"\
+      f"Temp: {conditions['Temp']}\n"\
       f"Feed_N2_mf: {conditions['Feed_N2_mf']}\n"
      )
 print(f"Result of model inference: {response.json()}")
