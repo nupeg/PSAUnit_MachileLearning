@@ -25,7 +25,7 @@ conditions = {
     }
 
 #url = "http://127.0.0.1:8000"
-url = "https://high-income-app.herokuapp.com"
+url = "https://n2-purity-app.herokuapp.com/"
 response = requests.post(f"{url}/predict",
                          json=conditions)
 
