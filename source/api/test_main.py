@@ -39,4 +39,4 @@ def test_get_PSA_N2Purity():
     r = client.post("/predict", json=conditions)
     # print(r.json())
     assert r.status_code == 200
-    #assert r.json() > 0.8
+    assert r.json() > 0.8
