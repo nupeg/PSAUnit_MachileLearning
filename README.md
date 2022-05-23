@@ -6,6 +6,7 @@ We'll be looking at the efficiency of Nitrogen (N2) separation from a CH4-N2 fee
 
 <center><img width="200" src="images/PSA_unit.png"></center>
 From: [Parker Balston](https://www.parker.com)
+
 ## :computer: Development
 
 This application was developed and published online regarding the following tools:
