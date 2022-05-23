@@ -66,101 +66,213 @@ class Conditions(BaseModel):
 @app.get("/", response_class=HTMLResponse)
 async def root():
     return """
-        <h1 style="color: #5e9ca0;"><span style="text-decoration: underline; color: #000080;">Pressure swing adsorption (PSA) unit&nbsp;</span></h1>
-        <p style="text-align: justify;">We'll be looking at the efficiency of Nitrogen (N<sub>2</sub>) separation from a CH<sub>4</sub>-N<sub>2</sub> feed stream by a distillation column. Twelve parameters were monitored in order to determine their influence on N<sub>2</sub> separation.</p>
-        <ul>
-        <li style="text-align: justify;">The used <span style="text-decoration: underline;">database</span> can be found by clicking on the following text:&nbsp;<strong><span style="color: #ffffff; background-color: #000080; padding: 0.5px 3px;"><a style="color: #ffffff; background-color: #000080;" title="Machine learning model and optimization of a PSA unit for methane-nitrogen separation" href="Machine learning model and optimization of a PSA unit for methane-nitrogen separation">See paper</a></span></strong>.</li>
-        <li>To go to the <span style="text-decoration: underline;">application</span> execution page click <span style="background-color: #008000; color: #ffffff;"><strong><a style="background-color: #008000; color: #ffffff;" title="https://n2-purity-app.herokuapp.com/docs" href="https://n2-purity-app.herokuapp.com/docs">here</a></strong></span>.</li>
-        <li>To go to the <span style="text-decoration: underline;">Github</span> repository click <span style="color: #ffffff; background-color: #333333;"><strong><a style="color: #ffffff; background-color: #333333;" title="https://github.com/nupeg/PSAUnit_MachileLearning" href="https://github.com/nupeg/PSAUnit_MachileLearning">here</a></strong></span>.</li>
-        </ul>
-        <h3 style="color: #2e6c80;"><span style="color: #000080;">PSA parameters (input):</span></h3>
-        <table class="editorDemoTable" style="height: 211px; width: 654px;">
-        <thead>
-        <tr style="height: 18px;">
-        <td style="height: 18px; width: 294.438px; text-align: center;"><strong>Name of the parameter</strong></td>
-        <td style="height: 18px; width: 245.375px; text-align: center;"><strong>Variable name in the code and&nbsp; in the Heroku's .json input&nbsp;</strong></td>
-        <td style="height: 18px; width: 92.1875px; text-align: center;"><strong>Default value</strong></td>
-        </tr>
-        </thead>
-        <tbody>
-        <tr style="height: 22px;">
-        <td style="height: 10px; width: 294.438px;">Adsorption pressure (bar)</td>
-        <td style="width: 245.375px; height: 10px;">Adsorp_pres</td>
-        <td class="xl65" style="height: 10px; width: 92.1875px;" height="20">5.2</td>
-        </tr>
-        <tr style="height: 36px;">
-        <td style="width: 294.438px; height: 10px;">Co-current blowdown pressure (bar)</td>
-        <td style="width: 245.375px; height: 10px;">CoCur_BlowPres</td>
-        <td class="xl65" style="height: 10px; width: 92.1875px;" height="20">4.5</td>
-        </tr>
-        <tr style="height: 36px;">
-        <td style="width: 294.438px; height: 10px;">Counter-current blowdown pressure (bar)</td>
-        <td style="width: 245.375px; height: 10px;">CountCur_pres</td>
-        <td class="xl65" style="height: 10px; width: 92.1875px;" height="20">0.13</td>
-        </tr>
-        <tr style="height: 18px;">
-        <td style="width: 294.438px; height: 18px;">Adsorption time (s)</td>
-        <td style="width: 245.375px; height: 18px;">Adsorp_time</td>
-        <td class="xl65" style="height: 18px; width: 92.1875px;" height="20">53.5</td>
-        </tr>
-        <tr style="height: 18px;">
-        <td style="width: 294.438px; height: 18px;">Co-current desorption time (s)</td>
-        <td style="width: 245.375px; height: 18px;">CoCur_desorp_time</td>
-        <td class="xl65" style="height: 18px; width: 92.1875px;" height="20">30.5</td>
-        </tr>
-        <tr style="height: 36px;">
-        <td style="width: 294.438px; height: 19px;">Counter-current desorption time (s)</td>
-        <td style="width: 245.375px; height: 19px;">CountCur_desorp_time</td>
-        <td class="xl65" style="height: 19px; width: 92.1875px;" height="20">33</td>
-        </tr>
-        <tr style="height: 18px;">
-        <td style="width: 294.438px; height: 18px;">Compression time (s)</td>
-        <td style="width: 245.375px; height: 18px;">Compres_time</td>
-        <td class="xl65" style="height: 18px; width: 92.1875px;" height="20">21.9</td>
-        </tr>
-        <tr style="height: 18px;">
-        <td style="width: 294.438px; height: 18px;">Volumetric flow (m<sup>3</sup>&middot;s<sup>-1</sup>)</td>
-        <td style="width: 245.375px; height: 18px;">Vol_flow</td>
-        <td class="xl65" style="height: 18px; width: 92.1875px;" height="20">0.001</td>
-        </tr>
-        <tr style="height: 18px;">
-        <td style="width: 294.438px; height: 18px;">Temperature (K)</td>
-        <td style="width: 245.375px; height: 18px;">Temp</td>
-        <td class="xl65" style="height: 18px; width: 92.1875px;" height="20">296.3</td>
-        </tr>
-        <tr style="height: 18px;">
-        <td style="width: 294.438px; height: 18px;">Column length (m)</td>
-        <td style="width: 245.375px; height: 18px;">Col_length</td>
-        <td class="xl65" style="height: 18px; width: 92.1875px;" height="20">1.3</td>
-        </tr>
-        <tr style="height: 18px;">
-        <td style="width: 294.438px; height: 18px;">Column diameter (m)</td>
-        <td style="width: 245.375px; height: 18px;">Col_diam</td>
-        <td class="xl65" style="height: 18px; width: 92.1875px;" height="20">0.26</td>
-        </tr>
-        <tr style="height: 18px;">
-        <td style="width: 294.438px; height: 18px;">Feed nitrogen mole fraction</td>
-        <td style="width: 245.375px; height: 18px;">Feed_N2_mf</td>
-        <td class="xl65" style="height: 18px; width: 92.1875px;" height="20">0.76</td>
-        </tr>
-        </tbody>
-        </table>
-        <h3 style="color: #2e6c80;">&nbsp;</h3>
-        <h3 style="color: #2e6c80;"><span style="color: #000080;">PSA parameter (output):</span></h3>
-        <table class="editorDemoTable" style="width: 654px;">
-        <thead>
-        <tr style="height: 18px;">
-        <td style="height: 18px; width: 285.5px; text-align: center;"><strong>Name of the parameter</strong></td>
-        <td style="height: 18px; width: 352.5px; text-align: center;"><strong>Variable name in the code</strong></td>
-        </tr>
-        </thead>
-        <tbody>
-        <tr style="height: 22px;">
-        <td style="height: 10px; width: 285.5px;">N<sub>2</sub> mole fraction in the purified stream</td>
-        <td style="width: 352.5px;">PurStream_N2_mf</td>
-        </tr>
-        </tbody>
-        </table>
+        <head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>PSA Project</title>
+		<style type="text/css">
+			html, #page { padding:0; margin:0;}
+			body { margin:0; padding:0; width:100%; color:#787878; font:normal 15px/2.0em Sans-Serif;} 
+			h1, h2, h3, h4, h5, h6 {color:darkgreen;}
+			#page { background:#fff;}
+			#header, #footer, #top-nav, #content, #content #contentbar, #content #sidebar { margin:0; padding:0;text-align:justify;}
+						
+			/* Logo */
+			#logo { padding:0; width:auto; float:left;}
+			#logo h1 a, h1 a:hover { color:darkgreen; text-decoration:none;}
+			#logo h1 span { color:#BCCE98;}
+
+			/* Header */
+			#header { background:#fff; }
+			#header-inner { margin:0 auto; padding:0; width:970px; font-size:12px}
+			
+			/* Feature */
+			.feature { background:green;padding:8px;}
+			.feature-inner { margin:auto;width:970px;}
+			.feature-inner h1 {color:#DAE9BC;font-size:32px;}
+			
+			/* Menu */
+			#top-nav { margin:0 auto; padding:0px 0 0; height:37px; float:right;}
+			#top-nav ul { list-style:none; padding:0; height:37px; float:left;}
+			#top-nav ul li { margin:0; padding:0 0 0 8px; float:left;}
+			#top-nav ul li a { display:block; margin:0; padding:8px 20px; color:green; text-decoration:none;}
+			#top-nav ul li.active a, #top-nav ul li a:hover { color:#BCCE98;background-color: #BCCE98; color: #BCCE98}
+			
+			/* Content */
+			#content-inner { margin:0 auto; padding:10px 0; width:970px;background:#fff;}
+			#content #contentbar { margin:0; padding:0; float:right; width:760px;}
+			#content #contentbar .article { margin:0 0 24px; padding:0 20px 0 15px; }
+			#content #sidebar { padding:0; float:left; width:200px;}
+			#content #sidebar .widget { margin:0 0 12px; padding:8px 8px 8px 13px;line-height:1.4em;}
+			#content #sidebar .widget h3 a { text-decoration:none;}
+			#content #sidebar .widget ul { margin:0; padding:0; list-style:none; color:#959595;}
+			#content #sidebar .widget ul li { margin:0;}
+			#content #sidebar .widget ul li { padding:4px 0; width:185px;}
+			#content #sidebar .widget ul li a { color:green; text-decoration:none; margin-left:0px; padding:4px 8px 4px 16px;}
+			#content #sidebar .widget ul li a:hover { color:#BCCE98; font-weight:bold; text-decoration:none;}
+			
+			/* Footerblurb */
+			#footerblurb { background:#DAE9BC;color:green;}
+			#footerblurb-inner { margin:0 auto; width:922px; padding:24px;}
+			#footerblurb .column { margin:0; text-align:justify; float:left;width:250px;padding:0 24px;}
+			
+			/* Footer */
+			#footer { background:#fff;}
+			#footer-inner { margin:auto; text-align:center; padding:12px; width:922px;}
+			#footer a {color:green;text-decoration:none;}
+			
+			/* Clear both sides to assist with div alignment  */
+			.clr { clear:both; padding:0; margin:0; width:100%; font-size:0px; line-height:0px;}
+		</style>
+	</head>
+	<body>
+		<div id="page">
+			<header id="header">
+				<div id="header-inner">	
+					<div id="logo">
+						<h1><a>PSA Project<span> &#124; Machine Learning</span></a></h1>
+					</div>
+					<div class="clr"></div>
+				</div>
+			</header>
+			<div class="feature">
+				<div class="feature-inner">
+				<h1>Pressure swing adsorption (PSA) unit </h1>
+				</div>
+			</div>
+		
+	
+			<div id="content">
+				<div id="content-inner">
+				
+					<main id="contentbar">
+						<div class="article">
+							<p>We'll be looking at the efficiency of Nitrogen (N<sub>2</sub>) separation from a CH<sub>4</sub>-N<sub>2</sub> feed stream by a distillation column. Twelve parameters were monitored in order to determine their influence on N<sub>2</sub> separation. To use the PSA app go to the Application page by clicking the proper button in the IMPORTANT WEBSITES or by typing /docs at the end of the present URL. After that, expand the POST/prodecit menu, click the "Try it out" button, adjust the input parameters and execute.</p>
+                            <h3 style="color: #2e6c80;"><span style="color: darkgreen;">PSA parameters (input):</span></h3>
+            <table class="editorDemoTable" style="height: 211px; width: 654px;" border="1px">
+            <thead>
+            <tr style="height: 18px;">
+            <td style="height: 18px; width: 294.438px;text-align: center;"><strong>Name of the parameter</strong></td>
+            <td style="height: 18px; width: 245.375px;text-align: center;"><strong>Variable name in the code and&nbsp; in the Heroku's .json input&nbsp;</strong></td>
+            <td style="height: 18px; width: 92.1875px;text-align: center;"><strong>Default value</strong></td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr style="height: 22px;">
+            <td style="height: 10px; width: 294.438px;">Adsorption pressure (bar)</td>
+            <td style="width: 245.375px; height: 10px;">Adsorp_pres</td>
+            <td class="xl65" style="height: 10px; width: 92.1875px;" height="20">5.2</td>
+            </tr>
+            <tr style="height: 36px;">
+            <td style="width: 294.438px; height: 10px;">Co-current blowdown pressure (bar)</td>
+            <td style="width: 245.375px; height: 10px;">CoCur_BlowPres</td>
+            <td class="xl65" style="height: 10px; width: 92.1875px;" height="20">4.5</td>
+            </tr>
+            <tr style="height: 36px;">
+            <td style="width: 294.438px; height: 10px;">Counter-current blowdown pressure (bar)</td>
+            <td style="width: 245.375px; height: 10px;">CountCur_pres</td>
+            <td class="xl65" style="height: 10px; width: 92.1875px;" height="20">0.13</td>
+            </tr>
+            <tr style="height: 18px;">
+            <td style="width: 294.438px; height: 18px;">Adsorption time (s)</td>
+            <td style="width: 245.375px; height: 18px;">Adsorp_time</td>
+            <td class="xl65" style="height: 18px; width: 92.1875px;" height="20">53.5</td>
+            </tr>
+            <tr style="height: 18px;">
+            <td style="width: 294.438px; height: 18px;">Co-current desorption time (s)</td>
+            <td style="width: 245.375px; height: 18px;">CoCur_desorp_time</td>
+            <td class="xl65" style="height: 18px; width: 92.1875px;" height="20">30.5</td>
+            </tr>
+            <tr style="height: 36px;">
+            <td style="width: 294.438px; height: 19px;">Counter-current desorption time (s)</td>
+            <td style="width: 245.375px; height: 19px;">CountCur_desorp_time</td>
+            <td class="xl65" style="height: 19px; width: 92.1875px;" height="20">33</td>
+            </tr>
+            <tr style="height: 18px;">
+            <td style="width: 294.438px; height: 18px;">Compression time (s)</td>
+            <td style="width: 245.375px; height: 18px;">Compres_time</td>
+            <td class="xl65" style="height: 18px; width: 92.1875px;" height="20">21.9</td>
+            </tr>
+            <tr style="height: 18px;">
+            <td style="width: 294.438px; height: 18px;">Volumetric flow (m<sup>3</sup>&middot;s<sup>-1</sup>)</td>
+            <td style="width: 245.375px; height: 18px;">Vol_flow</td>
+            <td class="xl65" style="height: 18px; width: 92.1875px;" height="20">0.001</td>
+            </tr>
+            <tr style="height: 18px;">
+            <td style="width: 294.438px; height: 18px;">Temperature (K)</td>
+            <td style="width: 245.375px; height: 18px;">Temp</td>
+            <td class="xl65" style="height: 18px; width: 92.1875px;" height="20">296.3</td>
+            </tr>
+            <tr style="height: 18px;">
+            <td style="width: 294.438px; height: 18px;">Column length (m)</td>
+            <td style="width: 245.375px; height: 18px;">Col_length</td>
+            <td class="xl65" style="height: 18px; width: 92.1875px;" height="20">1.3</td>
+            </tr>
+            <tr style="height: 18px;">
+            <td style="width: 294.438px; height: 18px;">Column diameter (m)</td>
+            <td style="width: 245.375px; height: 18px;">Col_diam</td>
+            <td class="xl65" style="height: 18px; width: 92.1875px;" height="20">0.26</td>
+            </tr>
+            <tr style="height: 18px;">
+            <td style="width: 294.438px; height: 18px;">Feed nitrogen mole fraction</td>
+            <td style="width: 245.375px; height: 18px;">Feed_N2_mf</td>
+            <td class="xl65" style="height: 18px; width: 92.1875px;" height="20">0.76</td>
+            </tr>
+            </tbody>
+            </table>
+            <h3 style="color: #2e6c80;"><span style="color: darkgreen;">PSA parameter (output):</span></h3>
+            <table class="editorDemoTable" style="width: 654px;" border="1px">
+            <thead>
+            <tr style="height: 18px;">
+            <td style="height: 18px; width: 285.5px;text-align: center;"><strong>Name of the parameter</strong></td>
+            <td style="height: 18px; width: 352.5px;text-align: center;"><strong>Variable name in the code</strong></td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr style="height: 22px;">
+            <td style="height: 10px; width: 285.5px;">N<sub>2</sub> mole fraction in the purified stream</td>
+            <td style="width: 352.5px;">PurStream_N2_mf</td>
+            </tr>
+            </tbody>
+            </table>
+						</div>
+					</main>
+					
+					<nav id="sidebar">
+						<div class="widget">
+							<h3>IMPORTANT WEBSITES</h3>
+							<ul>
+                              <li><a style="background-color: #009d00; color: #f2f8e8; display: inline-block; padding: 3px 10px; font-weight: bold; border-radius: 4px;" title="Paper: Machine learning model and optimization of a PSA unit for methane-nitrogen separation" href="Machine learning model and optimization of a PSA unit for methane-nitrogen separation">Database</a></li>
+                              
+                            <li><a style="background-color: #009d00; color: #f2f8e8; display: inline-block; padding: 3px 10px; font-weight: bold; border-radius: 4px;" title="https://n2-purity-app.herokuapp.com/docs" href="https://n2-purity-app.herokuapp.com/docs">Application page</a></li>
+                            
+                            <li><a style="background-color: #009d00; color: #f2f8e8; display: inline-block; padding: 3px 10px; font-weight: bold; border-radius: 4px;" title="https://github.com/nupeg/PSAUnit_MachileLearning" href="https://github.com/nupeg/PSAUnit_MachileLearning">Github repository</a></li>
+							</ul>
+						</div>
+					</nav>
+					
+					<div class="clr"></div>
+				</div>
+			</div>
+		
+			<div id="footerblurb">
+				<div id="footerblurb-inner">
+				
+					<div>
+						<h2><span>Additional information</span></h2>
+						<p>Designed and implemented by Mário H. Moura-Neto and Mateus F. Monteiro. <br> For more detailed material on the project's conceptualization and execution please read the README.md file in the github repository.</p>
+					</div>	
+					</div>	
+					
+					<div class="clr"></div>
+				</div>
+			</div>
+			<footer id="footer">
+				<div id="footer-inner">
+					<p>&copy; Copyright 2022 - All Rights Reserved - <a href="https://github.com/nupeg/PSAUnit_MachileLearning"> Legal</a></p>
+					<div class="clr"></div>
+				</div>
+			</footer>
+	</body>
     """
         
     #return """
