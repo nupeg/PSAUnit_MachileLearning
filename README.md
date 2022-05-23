@@ -33,13 +33,21 @@ From: [Parker Balston](https://www.parker.com)
 ## :computer: Development
 
 This application was developed and published online regarding the following tools:
-- [Google Colaboratory](https://colab.research.google.com)
-- [Conda](https://docs.conda.io/en/latest/) 
+- [Google Colaboratory](https://colab.research.google.com) 
+   - Python 3 was applied to perform the steps of Extract, Transform and Load (ETL) the data. Exploratory Data Analysis (EDA), Fetch Data, EDA using Pandas-Profiling and Preprocessing were properly carried out. The scikit-learn library was used to develop the pipeline methodology.</p>
+- [Conda](https://docs.conda.io/en/latest/)
+   - It was used to create and manage a virtual enviroment with the required packages.
+- [Weights & Biases](https://wandb.ai/site) (Wandb)
+  - Wandb was applied during the complete pipeline process, as it can be used to automatically create and store the necessary artifacts, e.g., train, validation, test, and model inference artifacts.  
 - [FastAPI](https://fastapi.tiangolo.com/)
+   - Web framework for developing RESTful Application Programming Interface (API) in Python. It was used to create the app and manage the application's requests and responses.
 - [Jupyter Notebook](https://jupyter.org/)
-- [Weights & Biases](https://wandb.ai/site)
+   - Jupyter is the open source project on which Google Colab is based. It was applied to magage and run the project's files while testing the API.
 - [Github](https://github.com/)
+   - GitHub was chosen to host the source code and other required project files for its easy integration with several other applications and the broad user community. 
 - [Heroku](https://www.heroku.com/)
+   - Heroku was used to deploy the application. It is a cloud platform service that offers a free experience on the web implementation. Furthermore, it also supports multiple programming languages, which provides nice flexibility for possible future upgrades.   
+
 
 ## :rotating_light: Attention
 - The application shall be used whithin the studied parameter's limits.
@@ -49,8 +57,8 @@ This application was developed and published online regarding the following tool
 
 | Material | Hyperlink |
 | ------ | ------ |
-| Database publisher | [Paper, Sant'Anna et al. (2017)](https://www.sciencedirect.com/science/article/abs/pii/S0098135417302053) |
-| Web Application | [Online App](https://n2-purity-app.herokuapp.com/docs) |
+| Database publisher | [Paper, Sant Anna et al. (2017)](https://www.sciencedirect.com/science/article/abs/pii/S0098135417302053) |
+| Web Application | [Online App](https://psa-unit.herokuapp.com/docs) |
 
 
 ## :bookmark_tabs: License
