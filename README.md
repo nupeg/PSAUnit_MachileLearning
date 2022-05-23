@@ -1,10 +1,11 @@
-# <left><img width="50" src="images/PSA_logo.png"></left> PSA Project
+# <left><img width="80" src="images/PSA_logo.png"></left> PSA Project
 ## _Pressure swing adsorption (PSA) unit_
 
 The PSA application was developed by Mário H. Moura-Neto and Mateus F. Monteiro, both chemical engineering doctoral students of the Federal University of Rio Grande do Norte ([PPGEQ/UFRN](https://sigaa.ufrn.br/sigaa/public/programa/portal.jsf?id=106)). The project was supervised by Prof. Dr. [Ivanovitch M. D. Silva](https://github.com/ivanovitchm) ([PPgEEC/UFRN](https://sigaa.ufrn.br/sigaa/public/programa/portal.jsf?id=103)) along the Machine Learning course.
 We'll be looking at the efficiency of Nitrogen (N2) separation from a CH4-N2 feed stream by a distillation column. Twelve parameters were monitored in order to determine their influence on N2 separation.
 
-<center><img width="200" src="images/PSA_unit.png"></center>
+<center><img width="600" src="images/PSA_unit.png"></center>
+
 From: [Parker Balston](https://www.parker.com)
 
 ## :computer: Development
