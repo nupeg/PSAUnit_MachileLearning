@@ -243,7 +243,7 @@ async def root():
 							<ul>
                               <li><a style="background-color: #009d00; color: #f2f8e8; display: inline-block; padding: 3px 10px; font-weight: bold; border-radius: 4px;" title="https://www.sciencedirect.com/science/article/pii/S0098135417302053" href="https://www.sciencedirect.com/science/article/pii/S0098135417302053">Database</a></li>
                               
-                            <li><a style="background-color: #009d00; color: #f2f8e8; display: inline-block; padding: 3px 10px; font-weight: bold; border-radius: 4px;" title="https://psa-unit.herokuapp.com" href="https://psa-unit.herokuapp.com">Application page</a></li>
+                            <li><a style="background-color: #009d00; color: #f2f8e8; display: inline-block; padding: 3px 10px; font-weight: bold; border-radius: 4px;" title="https://psa-unit.herokuapp.com/docs" href="https://psa-unit.herokuapp.com/docs">Application page</a></li>
                             
                             <li><a style="background-color: #009d00; color: #f2f8e8; display: inline-block; padding: 3px 10px; font-weight: bold; border-radius: 4px;" title="https://github.com/nupeg/PSAUnit_MachileLearning" href="https://github.com/nupeg/PSAUnit_MachileLearning">Github repository</a></li>
 							</ul>
