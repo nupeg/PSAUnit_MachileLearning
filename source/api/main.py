@@ -146,7 +146,7 @@ async def root():
 				
 					<main id="contentbar">
 						<div class="article">
-							<p>We'll be looking at the efficiency of Nitrogen (N<sub>2</sub>) separation from a CH<sub>4</sub>-N<sub>2</sub> feed stream by a distillation column. Twelve parameters were monitored in order to determine their influence on N<sub>2</sub> separation. To use the PSA app go to the Application page by clicking the proper button in the IMPORTANT WEBSITES or by typing /docs at the end of the present URL. After that, expand the POST/prodecit menu, click the "Try it out" button, adjust the input parameters and execute.</p>
+							<p>We'll be looking at the efficiency of Nitrogen (N<sub>2</sub>) separation from a CH<sub>4</sub>-N<sub>2</sub> feed stream by a distillation column. Twelve parameters were monitored in order to determine their influence on N<sub>2</sub> separation. To use the PSA app go to the Application page by clicking the proper button in the IMPORTANT WEBSITES or by typing /docs at the end of the present URL. After that, expand the POST/predict menu, click the "Try it out" button, adjust the input parameters and execute.</p>
                             <h3 style="color: #2e6c80;"><span style="color: darkgreen;">PSA parameters (input):</span></h3>
             <table class="editorDemoTable" style="height: 211px; width: 654px;" border="1px">
             <thead>
@@ -239,9 +239,9 @@ async def root():
 					
 					<nav id="sidebar">
 						<div class="widget">
-							<h3>IMPORTANT WEBSITES</h3>
+							<h3>IMPORTANT MATERIAL</h3>
 							<ul>
-                              <li><a style="background-color: #009d00; color: #f2f8e8; display: inline-block; padding: 3px 10px; font-weight: bold; border-radius: 4px;" title="Paper: Machine learning model and optimization of a PSA unit for methane-nitrogen separation" href="Machine learning model and optimization of a PSA unit for methane-nitrogen separation">Database</a></li>
+                              <li><a style="background-color: #009d00; color: #f2f8e8; display: inline-block; padding: 3px 10px; font-weight: bold; border-radius: 4px;" title="https://www.sciencedirect.com/science/article/pii/S0098135417302053" href="https://www.sciencedirect.com/science/article/pii/S0098135417302053">Database</a></li>
                               
                             <li><a style="background-color: #009d00; color: #f2f8e8; display: inline-block; padding: 3px 10px; font-weight: bold; border-radius: 4px;" title="https://n2-purity-app.herokuapp.com/docs" href="https://n2-purity-app.herokuapp.com/docs">Application page</a></li>
                             
@@ -259,7 +259,7 @@ async def root():
 				
 					<div>
 						<h2><span>Additional information</span></h2>
-						<p>Designed and implemented by Mário H. Moura-Neto and Mateus F. Monteiro. <br> For more detailed material on the project's conceptualization and execution please read the README.md file in the github repository.</p>
+						<p>Designed and implemented by <a href="https://orcid.org/0000-0002-7980-1040"> Mário H. Moura-Neto </a> and <a href="https://orcid.org/0000-0002-7243-5463"> Mateus F. Monteiro </a>. <br> For more detailed material on the project's conceptualization and execution please read the README.md file in the github repository.</p>
 					</div>	
 					</div>	
 					
@@ -274,13 +274,6 @@ async def root():
 			</footer>
 	</body>
     """
-        
-    #return """
-    #<p><span style="font-size:28px"><strong>Hello World</strong></span></p>"""\
-    #"""<p><span style="font-size:20px">In this project, we will apply the skills """\
-    #    """acquired in the Deploying a Scalable ML Pipeline in Production course to develop """\
-    #    """ a regression model on Pressure swing adsorption (PSA): efficiency of N2 separation from a CH4-N2 feed stream by a distillation column. Twelve #    #    parameters were monitored in order to determine their influence on N2 separation"""\
-    #    """<a href="https://doi.org/10.1016/j.compchemeng.2017.05.006"> Column data from this paper</a>.</span></p>"""
 
 # run the model inference and use a Person data structure via POST to the API.
 @app.post("/predict")
