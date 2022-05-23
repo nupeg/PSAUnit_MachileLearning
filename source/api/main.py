@@ -243,7 +243,7 @@ async def root():
 							<ul>
                               <li><a style="background-color: #009d00; color: #f2f8e8; display: inline-block; padding: 3px 10px; font-weight: bold; border-radius: 4px;" title="https://www.sciencedirect.com/science/article/pii/S0098135417302053" href="https://www.sciencedirect.com/science/article/pii/S0098135417302053">Database</a></li>
                               
-                            <li><a style="background-color: #009d00; color: #f2f8e8; display: inline-block; padding: 3px 10px; font-weight: bold; border-radius: 4px;" title="https://n2-purity-app.herokuapp.com/docs" href="https://n2-purity-app.herokuapp.com/docs">Application page</a></li>
+                            <li><a style="background-color: #009d00; color: #f2f8e8; display: inline-block; padding: 3px 10px; font-weight: bold; border-radius: 4px;" title="https://psa-unit.herokuapp.com" href="https://psa-unit.herokuapp.com">Application page</a></li>
                             
                             <li><a style="background-color: #009d00; color: #f2f8e8; display: inline-block; padding: 3px 10px; font-weight: bold; border-radius: 4px;" title="https://github.com/nupeg/PSAUnit_MachileLearning" href="https://github.com/nupeg/PSAUnit_MachileLearning">Github repository</a></li>
 							</ul>
@@ -259,7 +259,7 @@ async def root():
 				
 					<div>
 						<h2><span>Additional information</span></h2>
-						<p>Designed and implemented by <a href="https://orcid.org/0000-0002-7980-1040"> Mário H. Moura-Neto </a> and <a href="https://orcid.org/0000-0002-7243-5463"> Mateus F. Monteiro </a>. <br> For more detailed material on the project's conceptualization and execution please read the README.md file in the github repository.</p>
+						<p>Designed and implemented by <a href="https://orcid.org/0000-0002-7980-1040">Mário H. Moura-Neto</a> and <a href="https://orcid.org/0000-0002-7243-5463">Mateus F. Monteiro</a>. <br> For more detailed material on the project's conceptualization and execution please read the README.md file in the github repository.</p>
 					</div>	
 					</div>	
 					
