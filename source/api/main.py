@@ -146,7 +146,7 @@ async def root():
 				
 					<main id="contentbar">
 						<div class="article">
-							<p>We'll be looking at the efficiency of Nitrogen (N<sub>2</sub>) separation from a CH<sub>4</sub>-N<sub>2</sub> feed stream by a distillation column. Twelve parameters were monitored in order to determine their influence on N<sub>2</sub> separation. To use the PSA app go to the Application page by clicking the proper button in the IMPORTANT WEBSITES or by typing /docs at the end of the present URL. After that, expand the POST/predict menu, click the "Try it out" button, adjust the input parameters and execute.</p>
+							<p>We'll be looking at the efficiency of Nitrogen (N<sub>2</sub>) separation from a CH<sub>4</sub>-N<sub>2</sub> feed stream by a solid-bed column. Twelve parameters were monitored in order to determine their influence on N<sub>2</sub> separation. To use the PSA app go to the Application page by clicking the proper button in the IMPORTANT MATERIAL or by going to https://psa-unit.herokuapp.com/docs. After that, expand the POST/predict menu, click the "Try it out" button, adjust the input parameters and execute.</p>
                             <h3 style="color: #2e6c80;"><span style="color: darkgreen;">PSA parameters (input):</span></h3>
             <table class="editorDemoTable" style="height: 211px; width: 654px;" border="1px">
             <thead>
@@ -160,7 +160,7 @@ async def root():
             <tr style="height: 22px;">
             <td style="height: 10px; width: 294.438px;">Adsorption pressure (bar)</td>
             <td style="width: 245.375px; height: 10px;">Adsorp_pres</td>
-            <td class="xl65" style="height: 10px; width: 92.1875px;" height="20">5.2</td>
+            <td class="xl65" style="height: 10px; width: 92.1875px;" height="20">4.8</td>
             </tr>
             <tr style="height: 36px;">
             <td style="width: 294.438px; height: 10px;">Co-current blowdown pressure (bar)</td>

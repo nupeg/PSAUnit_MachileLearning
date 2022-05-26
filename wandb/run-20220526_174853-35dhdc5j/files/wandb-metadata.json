@@ -1,0 +1,26 @@
+{
+    "os": "Windows-10-10.0.19043-SP0",
+    "python": "3.8.13",
+    "heartbeatAt": "2022-05-26T20:48:56.172687",
+    "startedAt": "2022-05-26T20:48:53.334975",
+    "docker": null,
+    "cpu_count": 4,
+    "cuda": null,
+    "args": [
+        "source/api",
+        "-vv",
+        "-s"
+    ],
+    "state": "running",
+    "program": "C:\\Users\\LABSIMULACAO\\anaconda3\\envs\\PSAUnit_ML2\\Scripts\\pytest-script.py",
+    "codePath": "..\\..\\..\\..\\anaconda3\\envs\\PSAUnit_ML2\\Scripts\\pytest-script.py",
+    "git": {
+        "remote": "https://github.com/nupeg/PSAUnit_MachileLearning",
+        "commit": "5fdd47f23827f9b5ad9c564e9d0a73f7dd4b0baa"
+    },
+    "email": "labsimulacao.nupeg@gmail.com",
+    "root": "C:/Users/LABSIMULACAO/Meu Drive/ML_Project1-N2_sep/Work_in_progress/PSAUnit_ML2",
+    "host": "LABSIMULACAOMARIO",
+    "username": "LABSIMULACAO",
+    "executable": "C:\\Users\\LABSIMULACAO\\anaconda3\\envs\\PSAUnit_ML2\\python.exe"
+}

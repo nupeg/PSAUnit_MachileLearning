@@ -11,7 +11,7 @@ From: [Parker Balston](https://www.parker.com)
 :small_blue_diamond: **PSA parameters (input):**
 | Name of the parameter | Variable name in the code and in the Heroku's .json input | Default value | Limits | 
 | ------ | ------ | ------ | ------ |
-| Adsorption pressure (bar) | Adsorp_pres | 5.2 | [4,6] | 
+| Adsorption pressure (bar) | Adsorp_pres | 4.8 | [4,6] | 
 | Co-current blowdown pressure (bar) | CoCur_BlowPres | 4.5 | [4,6] | 
 | Counter-current blowdown pressure (bar) | CountCur_pres | 0.13 | [0.1,0.2] | 
 | Adsorption time (s) | Adsorp_time | 53.5 | [20,60] | 
