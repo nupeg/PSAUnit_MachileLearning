@@ -2,8 +2,6 @@
 
 The PSA application was developed by Mário H. Moura-Neto and Mateus F. Monteiro, both chemical engineering doctoral students of the Federal University of Rio Grande do Norte ([PPGEQ/UFRN](https://sigaa.ufrn.br/sigaa/public/programa/portal.jsf?id=106)). The project was supervised by Prof. Dr. [Ivanovitch M. D. Silva](https://github.com/ivanovitchm) ([PPgEEC/UFRN](https://sigaa.ufrn.br/sigaa/public/programa/portal.jsf?id=103)) along the Machine Learning course.
 We'll be looking at the efficiency of Nitrogen (N<sub>2</sub>) separation from a CH<sub>4</sub>-N<sub>2</sub> feed stream by a solid-bed column. Twelve parameters were monitored in order to determine their influence on N<sub>2</sub> separation.
-<<<<<<< HEAD
-=======
 
 PSA is a cyclic adsorption process for gas separation and purification. PSA offers a wide range of device design, resulting in high applicability for several different systems. Recently, much attention has been devoted to the simulation and optimization of multiple PSA cycles. The process consists in the use of solid-adsorbent beds to separate impurities from a stream of gases. Thus, leading to a high-purity high-pressure stream of the interest gas (in this case, N<sub>2</sub>) and a low-pressure tail gas stream containing the impurity (CH<sub>4</sub>) and some of the nitrogen. As shown in the figure, two parallel adsorbent columns opperate in an alternating setup. While one is active, the other is going through a regeneration process.
 
@@ -12,7 +10,6 @@ Detailed and high-complexity mathematical models make design difficult. So, mach
 A database of 1300 datapoints was published (CSV file) by Sant Anna et al. (2017) regarding the N<sub>2</sub>-CH<sub>4</sub> PSA unit. Data of several sensors (e.g. temperature, pressure and volumetric flow) and residence time of the fluid (gas mixture) inside the solid-bed column. The CSV file contains 13 columns, the target one (i.e. the value we wish to predict) is the N<sub>2</sub> concentration (mole fraction) in the N<sub>2</sub> recovery stream.
 
 The following pipeline steps were considered: _**1**_. Fetch data, _**2**_. Exploratory Data Analysis (EDA), _**3**_. Preprocessing, _**4**_. Data Check, _**5**_. Data segregation, _**6**_. Train and _**7**_. Test.
->>>>>>> 3484d87898f5808132471778e9a536915f9c0efc
 
 <p align="center"><strong> Simplified schematics of a PSA unit. </strong></p>
 <p align="center"> <img width="600" src="images/PSA_unit.png"> </p>
