@@ -19,7 +19,7 @@ The following pipeline steps were considered: _**1**_. Fetch data, _**2**_. Expl
 
 Adapted from: [Parker Hannifin Corp](https://www.parker.com)
 
-It is also noteworthy that a **Model Card** of the application is available. To see it just browse the model_card folder in this repository.
+It is also noteworthy that a [Model Card](https://github.com/nupeg/PSAUnit_MachileLearning/blob/main/model_card/model_card.pdf) of the application is available. To see it just browse the model_card folder in this repository.
 
 :small_blue_diamond: **Table 1 - PSA parameters (input):**
 | Name of the parameter | Variable name in the code and in the Heroku's .json input | Default value | Limits | 

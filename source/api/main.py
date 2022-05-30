@@ -247,6 +247,9 @@ async def root():
                             
                             <li><a style="background-color: #009d00; color: #f2f8e8; display: inline-block; padding: 3px 10px; font-weight: bold; border-radius: 4px;" title="https://github.com/nupeg/PSAUnit_MachileLearning" href="https://github.com/nupeg/PSAUnit_MachileLearning">Github repository</a></li>
 							</ul>
+                            
+                            <li><a style="background-color: #009d00; color: #f2f8e8; display: inline-block; padding: 3px 10px; font-weight: bold; border-radius: 4px;" title="https://github.com/nupeg/PSAUnit_MachileLearning/blob/main/model_card/model_card.pdf" href="https://github.com/nupeg/PSAUnit_MachileLearning/blob/main/model_card/model_card.pdf">Model Card</a></li>
+							</ul>
 						</div>
 					</nav>
 					
