@@ -1,6 +1,6 @@
 """
-Creator: Ivanovitch Silva
-Date: 17 April 2022
+Creator: Mario H. Moura-Neto and Mateus F. Monteiro
+Date: May 2022
 Create API
 """
 # from typing import Union
@@ -15,8 +15,6 @@ import sys
 from source.api.pipeline import NumericalTransformer #FeatureSelector, CategoricalTransformer,
 
 # global variables
-#setattr(sys.modules["__main__"], "FeatureSelector", FeatureSelector)
-#setattr(sys.modules["__main__"], "CategoricalTransformer", CategoricalTransformer)
 setattr(sys.modules["__main__"], "NumericalTransformer", NumericalTransformer)
 
 # name of the model artifact
@@ -29,7 +27,6 @@ run = wandb.init(project="psa_dec_tree_reg_v1",job_type="api")
 app = FastAPI()
 
 # declare request example data using pydantic
-# a person in our dataset has the following attributes
 class Conditions(BaseModel):
     Adsorp_pres: float
     CoCur_BlowPres: float
@@ -66,7 +63,7 @@ class Conditions(BaseModel):
 @app.get("/", response_class=HTMLResponse)
 async def root():
     return """
-        <head>
+                <head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>PSA Project</title>
 		<style type="text/css">
@@ -241,14 +238,16 @@ async def root():
 						<div class="widget">
 							<h3>IMPORTANT MATERIAL</h3>
 							<ul>
-                              <li><a style="background-color: #009d00; color: #f2f8e8; display: inline-block; padding: 3px 10px; font-weight: bold; border-radius: 4px;" title="https://www.sciencedirect.com/science/article/pii/S0098135417302053" href="https://www.sciencedirect.com/science/article/pii/S0098135417302053">Database</a></li>
-                              
-                            <li><a style="background-color: #009d00; color: #f2f8e8; display: inline-block; padding: 3px 10px; font-weight: bold; border-radius: 4px;" title="https://psa-unit.herokuapp.com/docs" href="https://psa-unit.herokuapp.com/docs">Application page</a></li>
+                            
+                            <li><a style="background-color: #009d00; color: #f2f8e8; display: inline-block; padding: 3px 10px; font-weight: bold; border-radius: 4px;" title="https://psa-unit.herokuapp.com/docs" href="https://psa-unit.herokuapp.com/docs">APPLICATION PAGE</a></li>
                             
                             <li><a style="background-color: #009d00; color: #f2f8e8; display: inline-block; padding: 3px 10px; font-weight: bold; border-radius: 4px;" title="https://github.com/nupeg/PSAUnit_MachileLearning" href="https://github.com/nupeg/PSAUnit_MachileLearning">Github repository</a></li>
-							</ul>
+                            
+                            <li><a style="background-color: #009d00; color: #f2f8e8; display: inline-block; padding: 3px 10px; font-weight: bold; border-radius: 4px;" title="https://medium.com/@labsimulacao.nupeg/psa-unit-for-nitrogen-purification-machine-learning-approach-using-decission-tree-regressor-3cdba58c9697" href="https://medium.com/@labsimulacao.nupeg/psa-unit-for-nitrogen-purification-machine-learning-approach-using-decission-tree-regressor-3cdba58c9697">Medium Article</a></li>
                             
                             <li><a style="background-color: #009d00; color: #f2f8e8; display: inline-block; padding: 3px 10px; font-weight: bold; border-radius: 4px;" title="https://github.com/nupeg/PSAUnit_MachileLearning/blob/main/model_card/model_card.pdf" href="https://github.com/nupeg/PSAUnit_MachileLearning/blob/main/model_card/model_card.pdf">Model Card</a></li>
+                            
+                            <li><a style="background-color: #009d00; color: #f2f8e8; display: inline-block; padding: 3px 10px; font-weight: bold; border-radius: 4px;" title="https://www.sciencedirect.com/science/article/pii/S0098135417302053" href="https://www.sciencedirect.com/science/article/pii/S0098135417302053">Database</a></li>
 							</ul>
 						</div>
 					</nav>
@@ -278,11 +277,9 @@ async def root():
 	</body>
     """
 
-# run the model inference and use a Person data structure via POST to the API.
+# run the model inference and use a Conditions data structure via POST to the API.
 @app.post("/predict")
 async def get_inference(conditions: Conditions):
-    
-    #IMPLEMENTAR O TESTE EM TODAS AS VARIAVEIS PARA CHECAR SE ESTAO NOS LIMITES. COLOCAR IF E MOSTRAR MENSAGEM DE ERRO CASO ALGUMA NAO ESTEJA
     
     # Download inference artifact
     model_export_path = run.use_artifact(artifact_model_name).file()
